@@ -12,4 +12,4 @@ jobs:
     steps:
       - uses: solar2d/directory-plugin-action@main
         with:
-          pat: ${{ secrets.ISSUE_PAT }}
+          pat: ${{ secrets.GITHUB_TOKEN }}
