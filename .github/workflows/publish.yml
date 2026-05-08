@@ -6,10 +6,13 @@ on:
   repository_dispatch:
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   publish-release:
     runs-on: ubuntu-latest
     steps:
       - uses: solar2d/directory-plugin-action@main
         with:
-          pat: ${{ secrets.GITHUB_TOKEN }}
+          pat: ${{ secrets.ISSUE_PAT }}
